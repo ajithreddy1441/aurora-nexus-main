@@ -17,9 +17,21 @@ export const useVisitorTracker = () => {
             navigator.userAgent
           );
 
+        const locationResponse = await fetch(
+          "https://ipapi.co/json/"
+        );
+
+        const locationData = await locationResponse.json();
+
         await supabase.from("visitors").insert([
           {
             visitor_id: visitorId,
+            ip_address: locationData.ip,
+            city: locationData.city,
+            region: locationData.region,
+            country: locationData.country_name,
+            timezone: locationData.timezone,
+            language: navigator.language,
             user_agent: navigator.userAgent,
             device_type: isMobile
               ? "Mobile"
@@ -29,7 +41,7 @@ export const useVisitorTracker = () => {
           },
         ]);
       } catch (error) {
-        console.log(error);
+        console.error("Visitor tracking error:", error);
       }
     };
 
