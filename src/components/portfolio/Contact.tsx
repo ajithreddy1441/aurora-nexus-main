@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-<<<<<<< HEAD
 import {
   FiMail,
   FiGithub,
@@ -8,14 +7,10 @@ import {
   FiArrowRight,
 } from "react-icons/fi";
 
-=======
-import { FiMail, FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
->>>>>>> 2094b62ab4ca7fe386c4ddd6c03e33ad8e80f8f8
 import { Section } from "./Section";
 import { MagneticButton } from "./MagneticButton";
 
 export function Contact() {
-<<<<<<< HEAD
   const socialLinks = [
     {
       icon: FiGithub,
@@ -34,13 +29,10 @@ export function Contact() {
     },
   ];
 
-=======
->>>>>>> 2094b62ab4ca7fe386c4ddd6c03e33ad8e80f8f8
   return (
     <Section
       id="contact"
       eyebrow="05 — Contact"
-<<<<<<< HEAD
       title={
         <span className="text-gradient-aurora">
           Let&apos;s build something unforgettable.
@@ -55,7 +47,6 @@ export function Contact() {
         transition={{ duration: 0.8 }}
         className="glass-strong relative mx-auto max-w-4xl overflow-hidden rounded-3xl p-8 md:p-12"
       >
-        {/* Background Glow */}
         <div
           className="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full opacity-20 blur-[120px]"
           style={{
@@ -92,10 +83,7 @@ export function Contact() {
               <span>Send Email</span>
             </MagneticButton>
 
-            <MagneticButton
-              href="https://cal.com"
-              variant="ghost"
-            >
+            <MagneticButton href="https://cal.com" variant="ghost">
               <span>Book a Call</span>
               <FiArrowRight />
             </MagneticButton>
@@ -123,54 +111,9 @@ export function Contact() {
                 </motion.a>
               );
             })}
-=======
-      title={<span className="text-gradient-aurora">Let&apos;s build something unforgettable.</span>}
-      description="Booking selected projects for Q3 2026. Tell me about your idea — I reply within 48 hours."
-    >
-      <motion.div
-        initial={{ opacity: 0, scale: 0.96 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
-        className="glass-strong relative mx-auto max-w-3xl overflow-hidden rounded-3xl p-10 text-center"
-      >
-        <div
-          className="pointer-events-none absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full opacity-60 blur-3xl"
-          style={{ background: "var(--gradient-aurora)" }}
-        />
-        <div className="relative">
-          <a
-            href="mailto:hello@novavale.studio"
-            className="font-display text-3xl font-semibold tracking-tight text-gradient sm:text-5xl"
-          >
-            hello@novavale.studio
-          </a>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <MagneticButton href="mailto:hello@novavale.studio">
-              <FiMail /> Send an email
-            </MagneticButton>
-            <MagneticButton href="https://cal.com" variant="ghost">
-              Book a call
-            </MagneticButton>
-          </div>
-          <div className="mt-8 flex items-center justify-center gap-3">
-            {[FiGithub, FiLinkedin, FiTwitter].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                className="glass flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground transition-all hover:scale-110 hover:text-foreground hover:shadow-neon"
-              >
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
->>>>>>> 2094b62ab4ca7fe386c4ddd6c03e33ad8e80f8f8
           </div>
         </div>
       </motion.div>
     </Section>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 2094b62ab4ca7fe386c4ddd6c03e33ad8e80f8f8

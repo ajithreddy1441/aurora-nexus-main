@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-import { useVisitorTracker } from "@/hooks/useVisitorTracker";
-=======
->>>>>>> 2094b62ab4ca7fe386c4ddd6c03e33ad8e80f8f8
 import { createFileRoute } from "@tanstack/react-router";
+import { useVisitorTracker } from "@/hooks/useVisitorTracker";
+
 import { SmoothScroll } from "@/components/portfolio/SmoothScroll";
 import { AuroraBg } from "@/components/portfolio/AuroraBg";
 import { MouseGlow } from "@/components/portfolio/MouseGlow";
@@ -19,13 +17,19 @@ import { Footer } from "@/components/portfolio/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Nova Vale — Cinematic Design Engineer & Interaction Designer" },
+      {
+        title:
+          "Nova Vale — Cinematic Design Engineer & Interaction Designer",
+      },
       {
         name: "description",
         content:
           "Independent design engineer crafting luxurious, immersive, award-winning interfaces for ambitious brands.",
       },
-      { property: "og:title", content: "Nova Vale — Cinematic Design Engineer" },
+      {
+        property: "og:title",
+        content: "Nova Vale — Cinematic Design Engineer",
+      },
       {
         property: "og:description",
         content:
@@ -37,16 +41,15 @@ export const Route = createFileRoute("/")({
 });
 
 function Portfolio() {
-<<<<<<< HEAD
   useVisitorTracker();
-=======
->>>>>>> 2094b62ab4ca7fe386c4ddd6c03e33ad8e80f8f8
+
   return (
     <div className="relative min-h-screen overflow-x-hidden">
       <SmoothScroll />
       <AuroraBg />
       <MouseGlow />
       <Navbar />
+
       <main className="relative z-10">
         <Hero />
         <About />
@@ -56,6 +59,7 @@ function Portfolio() {
         <Experience />
         <Contact />
       </main>
+
       <Footer />
     </div>
   );
