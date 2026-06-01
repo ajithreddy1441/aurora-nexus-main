@@ -7,7 +7,11 @@ import { Experience } from "./components/portfolio/Experience";
 import { Contact } from "./components/portfolio/Contact";
 import { Footer } from "./components/portfolio/Footer";
 
+import { useVisitorTracker } from "./hooks/useVisitorTracker";
+
 function App() {
+  useVisitorTracker();
+
   return (
     <>
       <Navbar />
